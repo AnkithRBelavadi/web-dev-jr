@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
@@ -12,9 +15,13 @@
     <center><h1>My Profile</h1></center>
 
     <hr>
-    <img src="https://i.pravatar.cc/300" width="150" height="150" alt="Profile Picture">
-
-    <h4><p> My Name is XYZ, I am a softarre development engineer.<br>
+    <!-- <img src="https://i.pravatar.cc/300" width="150" height="150" alt="Profile Picture"> -->
+    <div class = "image-container">
+        <div class="blur-bg"></div>
+        <img src ="assets/images/img_1.jpg" width="150" height="150" alt="Profile Picture">
+    </div>
+    
+    <h4 class="intro"><p> My Name is XYZ, I am a software development engineer.<br>
         I Work in a cysec start-up, I love coding.
     </p></h4>
     <!-- How do I get this to center now ? -->
@@ -22,17 +29,17 @@
     <hr>
 
     <h2>
-        Adademic Projects
+        Academic Projects
     </h2>
     <ol>
         <li>
             <h3>
             Automated Aquatic Filtration System
             </h3>
-            <p>
-                The project is basically a hover-craft with a convayor belt
-                and a filteration unit, it has 2 pumps, one for inlet and the other for ourlet.
-                The manuaver is done with the help of electric motors attached on either side of the chasis.
+            <p class="description">
+                The project is basically a hover-craft with a conveyor belt
+                and a filtration unit, it has 2 pumps, one for inlet and the other for outlet.
+                The maneuver is done with the help of electric motors attached on either side of the chasis.
             </p>
         </li>
 
@@ -41,7 +48,7 @@
             <!-- Give me a title -->
             </h3>
             <p>
-            <!-- Give me a discription -->
+            <!-- Give me a description -->
             </p>
         </li>
         
@@ -69,16 +76,18 @@
 
     <hr>
     <h2> Send a Hi-Fi</h2>
-    <form>
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" placeholder="Enter your name"><br><br>
+    <div class="form-container">
+    <form class = "form">
+            <h3> I need your data!</h3>
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
 
-            <label for="name">Mobile no.</label><br>
-            <input type="text" id="ph.no" placeholder="Enter your number""><br><br>
+            <label>Mobile no.</label>
+            <input type="text" id="ph.no" placeholder="Enter your number">
 
             <button type="submit">HiFi beeches</button>
     </form>
-    
+    </div>
     <hr>
     <h2>
         Get in touch
