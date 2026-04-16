@@ -1,4 +1,4 @@
-/* #images {
+#images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -10,7 +10,7 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
-} */
+}
 
 
 
@@ -63,3 +63,48 @@ img:nth-child(-n+3) {
 .img:nth-child(6) {
     grid-column: span 6;
 } */
+
+/* body{
+    display: flex;
+
+    justify-content: center;
+} */
+.carousel {
+    width: 300px;
+    overflow: hidden;
+    margin: 20px auto;  /* margin x y -> x for vertical space, y for horizontal  */
+    display: flex;
+    border-radius: 10px;
+    background-color: #eee;
+}
+
+.carousel-track {
+    display: flex;
+    flex-direction: row;
+    width: calc(300px * 4); 
+    gap: 10px;
+    animation: slide 12s ease-in-out infinite;
+}
+
+/* Think about it... why did we use flex.. and flex - direction ? */
+
+.carousel-track img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    /*  0 to 20% of 12 sec to view the image */
+    0%, 20% { transform: translateX(0); }
+    /* 5% time of 12 sec for transition */
+    25%, 45% { transform: translateX(-310px); }
+
+    50%, 70% { transform: translateX(-620px); }
+    
+    
+    75%, 95% { transform: translateX(-930px); }
+
+    /* Go back */
+    100% { transform: translateX(0px); }
+}
